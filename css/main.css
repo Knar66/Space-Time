@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+}
+
+.hiddenOverflow {
+    overflow: hidden;
+}
+
+/* Objects */
+
+.box {
+    position: absolute;
+    height: 92px;
+    width: 70px;
+    box-sizing: border-box;
+    background-color: white;
+    background: url("../images/p2_spritesheet.png");
+    background-position: 0px 0px;
+    z-index: 4;
+}
+.debug {
+    background-color: rgba(0,0,0,.5);
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    z-index: 100;
+    color: white;
+}
+.ui {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.7);
+    z-index: 100;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/* tiles */
+
+.tile {
+    position: absolute;
+    min-height: 70px;
+    min-width: 70px;
+    box-sizing: border-box;
+    background-size: cover;
+    display: inline-block;
+}
+
+.bloodSpikes {
+    width: 70px;
+    height: 70px;
+    background: url("../images/42_blood.png");
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/*worldBuilder*/
+
+.gameWindow {
+    width: 100%;
+    height: 100%;
+}
+
+.toolbar {
+    height: 100%;
+    width: 420px;
+    background-color: rgba(0,0,0,.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 7;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    color: lightgray;
+    text-shadow: 2px 2px 8px #000000;
+    padding-bottom: 50px;
+}
+
+.tool {
+    margin: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    z-index: 8;
+}
+
+.toptool {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    background-color: white;
+    display: inline-block;
+    box-sizing: border-box;
+    background-size: cover;
+    z-index: 8;
+    float: left;
+    color: black;
+}
+
+.gridLayer1 {
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+    /*
+    -webkit-filter: brightness(80%);
+    filter:         brightness(80%);
+    */
+}
+
+.gridLayer2 {
+    position: absolute;
+    display: inline-block;
+    z-index: 2;
+    /*
+    -webkit-filter: brightness(90%);
+    filter:         brightness(90%);
+    */
+}
+
+.gridLayer3 {
+    position: absolute;
+    display: inline-block;
+    z-index: 3;
+}
+
+.gridLayer4 {
+    position: absolute;
+    display: inline-block;
+    z-index: 5;
+}
+
+.gridBox {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    z-index: 6;
+    box-sizing: border-box;
+    border: 1px solid rgba(100, 100, 100, 0.2);
+}
+
+.padded {
+    padding: 10px;
+    color: white;
+}
+
+.butn {
+    margin: 5px 0;
+    color: white;
+    background-color: darkslategray;
+    height: 30px;
+    box-shadow: none;
+    border: none;   
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.btn:hover, .btn:active, .btn:focus, .btn:visited {
+    color: white;
+    background-color: darkslategray;
+}
+
+.layer {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+input {
+    color: black;
+}
+
+.shadowed1 {
+    /* 
+    -webkit-filter: brightness(80%);
+    filter:         brightness(80%); 
+    */
+}
+
+.shadowed2 {
+    /* 
+    -webkit-filter: brightness(90%);
+    filter:         brightness(90%);
+    */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.home {
+    background: linear-gradient(#b3f0ff, #49daff);
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+}
+
+a, a:focus, a:active {
+    font-size: 50px;
+    text-shadow: 0 0 10px #000000;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: darkslategray;
+}
+
+h1 {
+    color: white;
+    margin-top: 2em;
+    font-size: 75px;
+    text-shadow: 0 0  10px #000000;
+}
+
+* {
+    font-family: sans-serif;
+}
+
+.animating {
+  animation-duration: 1s;
+  animation-name: phaseIn;
+}
+
+@keyframes phaseIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100;
+  }
+}

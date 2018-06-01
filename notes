@@ -1,0 +1,65 @@
+TODO: 
+x    remove collectible objects from gameworld when you collide
+x    add UI with objects left to collect
+x    in worldbuilder, if selected = 0 dont put 0.png
+x    let builder select where alien goes
+x    add win condition
+x       collect objects (array of objects to collect)
+x       return to spaceship after collecting all objects
+x   add scrolling, up and sideways
+x       fix scrolling!  
+x    add big div to worldbuilder so you can scroll up
+x    make browser scroll to bottom at load
+x    have player go to next level if they win. If player is at last level, show win screen then return to index
+x    add death event (warp back to beginning of level)
+x    add reverse animations to player
+x    add player down animation
+     
+BUGS AND MECHANICS
+x    add more block types
+x       fix spaceship collision
+x       ice
+x       spike (death)
+x       water (death)
+x       non-square tiles
+x       more collectible object types
+x       Make default tile no hitbox (after formatting all tiles in collidable tile pool)
+x    apply friction at endstep of horizontal movement, not on collision (multiple collisions were bring applied)
+x    select which world to edit from drop-down, or create new
+x    fix bug with screen being too small and camera default pos
+x    screen going over max width
+x    when player dies, move camera back to starting position (dynamically define starting position based on player starting position)
+x    Fix camera so it pans to player when viewport size changes
+x    Change camera defaut position to be based on player start position
+x    optional use of arrow keys instead of wasd
+x    further back objects are darker
+x    walking into objects from the left causes camera to slowly pan to the left
+x    add more collectibles
+x    make sure all objects correspond to the correct image
+x    fix phasing into objects
+     maybe? allow player to press 1-5 to change to that dimension
+     make objects have no min-width (grass is too big)
+     
+WORLD BUILDER
+x        choose background color in worldbuilder (implemented on backend already)
+x        let builder specify height and width of world (need to be able to reload page grid)
+x        let builder choose player starting position
+x    show/hide blocks in worldbuilder depending on which layer is selected
+x    add tool icons to make them more clear (eraser/grid)
+x    resize collectibles to 70x70 max
+     turn off q/e hotkeys when textboxes are active
+     
+FRONT END VISUALSs
+x     revamp index page
+x     revamp win page
+     
+OPTIONAL FEATURES FOR THE FUTURE AFTER RELEASE
+    select player skin
+    add drop shadows to background items to make them seem further away
+    turn around time on frictioned surfaces (harder to change direction on ice etc)
+    + and - symbols for x/y starting pos in worldbuilder
+    enemies
+    equippable items
+    double jump
+    general animation function to loop through all objects that need to animate (if other blocks need animation in the future)
+    add buttons to control in mobile

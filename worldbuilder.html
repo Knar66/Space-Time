@@ -1,0 +1,52 @@
+<!-- I use inline javascript and css here because this is a quickly thrown together tool just to build levels -->
+<!doctype html>
+<html>
+    <head>
+    <title>test</title>
+        <script src="js/jquery-3.2.1.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body onkeydown="keyPressDown(event)">
+        <div class="toolbar" id="toolbar">
+            <div style="display: inline-block;">
+                <h3>Create blank level</h3>
+                <form onsubmit="blankLevel($('#xTiles')[0].value, $('#yTiles')[0].value); createLayout(); return false;">
+                    width (tiles): <input type="text" id="xTiles" name="xTiles" value="100"><br>
+                    height (tiles): <input type="text" id="yTiles" name="yTiles" value="20"><br>
+                    <input type="submit" class="btn">
+                </form>
+                
+                <h3>Change background color</h3>
+                <form onsubmit="changebgColor(); return false;">
+                    Starting Color: <input type="text" id="bgColor1" value="#b3f0ff"><br>
+                    Ending Color: <input type="text" id="bgColor2" value="#49daff"><br>
+                    <input type="submit" class="btn">
+                </form>
+                
+                <h3>Change Player starting position</h3>
+                <form onsubmit="changeStartingPos(); return false;">
+                    X: <input type="text" id="startXPos" value="70"><br>
+                    Y: <input type="text" id="startYPos" value="70"><br>
+                    <input type="submit" class="btn">
+                </form>
+                
+                <h3>Select Layer</h3>
+                <button class="butn layer" type="button" onClick="clickLayer(this, 1)" style="border: 2px solid white;">Background layer 1</button>
+                <button class="butn layer" type="button" onClick="clickLayer(this, 2)">Background layer 2</button>
+                <button class="butn layer" type="button" onClick="clickLayer(this, 3)">Player layer (only layer with collision)</button>
+                <button class="butn layer" type="button" onClick="clickLayer(this, 4)">Foreground Layer</button>
+                <h3>Tools</h3>
+                <!-- Icon made by https://www.flaticon.com/authors/freepik-->
+                <div class="toptool" id = "0" onClick="toggleGrid()" style="color: white; width: 70px; height: 70px; background: url('images/grid.png') no-repeat">Toggle grid</div>
+                <!-- Icon made by https://www.flaticon.com/authors/pixel-buddha-->
+                <div class="toptool text-center" id = "0" onClick="clickTool(this)" style="color: white; border: 3px solid white; background: url('images/eraser.png') no-repeat">eraser</div><br>
+            </div>
+        </div>
+        
+        <script src="js/level_0.js"></script>
+        <script src="js/level_tutorial.js"></script>
+        <script src="js/worldbuilder.js"></script>
+    </body>
+</html>
